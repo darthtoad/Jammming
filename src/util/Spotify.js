@@ -2,7 +2,7 @@
 const redirectUri = 'http:://localhost:3000/';
 const clientId = 'da746166c2934c5e8b76a4f60e137b75';
 
-let userAcessToken;
+let accessToken;
 
 const Spotify = {
 
@@ -39,7 +39,7 @@ const Spotify = {
 				return response.json();
 			}
 			throw new Error('Request failed!');
-		}, networkError -> console.log(networkError.message)
+		}, networkError => console.log(networkError.message)
 	).then(jsonResponse => {
 		if (!jsonResponse.tracks) {
 			return [];
@@ -57,7 +57,7 @@ const Spotify = {
 
 	savePlaylist(name, trackUris) {
 		if (!name || !trackUris) {
-			return <--! alert('You broke the internet!') -->;
+			return;
 		};
 
 		let accessToken = Spotify.getAccessToken();

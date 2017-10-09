@@ -11,16 +11,15 @@ class Playlist extends React.Component {
 
 	}
 
-	handleNameChange(event) {
+	onNameChange(event) {
 		this.props.onNameChange(event.target.value);
 	}
 
 	render() {
 		return (
 			<div className="Playlist">
-				<input onChange={this.handleNameChange} defaultValue={this.props.playlistName} />
-				<Tacklist tracks={this.props.playlistTracks} />
-			    <!-- You will add a map method that renders a set of Track components  -->
+				<input onChange={this.onNameChange} defaultValue={this.props.playlistName} />
+				<Tracklist tracks={this.props.playlistTracks} />
 			    <a onClick={this.props.onSave} className="save-playlist">SAVE TO SPOTIFY</a>
 			</div>
 			)
