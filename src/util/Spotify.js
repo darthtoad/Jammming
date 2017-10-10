@@ -1,5 +1,5 @@
 
-const redirectUri = 'http:://localhost:3000/';
+const redirectUri = 'http://localhost:3000/';
 const clientId = 'da746166c2934c5e8b76a4f60e137b75';
 
 let accessToken;

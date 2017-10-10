@@ -16,11 +16,11 @@ class Track extends React.Component {
 	  return <a className="Track-action" onClick={this.addTrack}>+</a>;
 	}
 
-	addTrack(track) {
+	addTrack(event) {
 		this.props.onAdd(this.props.track);
 	}
 
-	removeTrack(track) {
+	removeTrack(event) {
 		this.props.onRemove(this.props.track);
 	}
 
